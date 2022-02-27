@@ -93,8 +93,5 @@ function Box(props) {
 
 export default function App () {
 
-    return <>
-        <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} />
-    </>;
+    return <Box position={[0, 0, 0]} />;
 };
