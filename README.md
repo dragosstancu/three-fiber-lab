@@ -1,3 +1,5 @@
 # A-Frame LAB Base
 
-A-frame yes, React -> not on this one
+A-frame yes, React yes
+
+- Uses https://github.com/pmndrs/react-three-fiber
