@@ -1,68 +1,58 @@
 import './index.css';
-import * as THREE from 'three';
-import AppClass from './App';
+import ReactDOM from 'react-dom'
+import React from 'react'
+import Scene from './Scene';
+import { Canvas } from '@react-three/fiber'
 import reportWebVitals from './reportWebVitals';
 
 const CLEAR_COLOR = 0xdfdfdf;
 
-const setupScene = () => {
+// const setupScene = () => {
 
-    // Create a scene
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      50, window.innerWidth / window.innerHeight, 0.1, 1000
-    );
+//     // Create a scene
+//     const scene = new THREE.Scene();
+//     const camera = new THREE.PerspectiveCamera(
+//       50, window.innerWidth / window.innerHeight, 0.1, 1000
+//     );
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setClearColor(CLEAR_COLOR);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+//     const renderer = new THREE.WebGLRenderer();
+//     renderer.setClearColor(CLEAR_COLOR);
+//     renderer.setPixelRatio(window.devicePixelRatio);
+//     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // Attach to DOM
-    document.body.appendChild(renderer.domElement);
+//     // Attach to DOM
+//     document.body.appendChild(renderer.domElement);
 
-    // Position our camera so we can see the cube
-    camera.position.z = 5;
+//     // Position our camera so we can see the cube
+//     camera.position.z = 5;
 
-    // Add a directional light to the scene
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
-    scene.add(directionalLight);
+//     // Add a directional light to the scene
+//     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+//     scene.add(directionalLight);
 
-    // Add an ambient light to the scene
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
-    scene.add(ambientLight);
+//     // Add an ambient light to the scene
+//     const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+//     scene.add(ambientLight);
 
-    window.addEventListener('resize', () => {
+//     window.addEventListener('resize', () => {
 
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-    });
+//         renderer.setPixelRatio(window.devicePixelRatio);
+//         renderer.setSize(window.innerWidth, window.innerHeight);
+//         camera.aspect = window.innerWidth / window.innerHeight;
+//         camera.updateProjectionMatrix();
+//     });
 
-    return { scene, camera, renderer };
-};
+//     return { scene, camera, renderer };
+// };
 
-const {
-  scene,
-  camera,
-  renderer
-} = setupScene();
-
-// Initialize the App
-const App = new AppClass({ scene, camera, render });
-
-// Start the render loop
-function render() {
-    requestAnimationFrame(render);
-
-    // Render the App on each frame!
-    App._render();
-
-    renderer.render(scene, camera);
-};
-
-render();
+ReactDOM.render(
+  <Canvas>
+    <ambientLight />
+    <pointLight position={[10, 10, 10]} />
+    <Scene />
+  </Canvas>,
+  document.getElementById('root'),
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
