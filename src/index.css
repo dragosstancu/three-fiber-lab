@@ -8,6 +8,11 @@ body {
 }
 
 html,
+body {
+    background-color: black;
+}
+
+html,
 body,
 canvas,
 #root {
