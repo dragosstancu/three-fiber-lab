@@ -1,8 +1,9 @@
-# A-Frame LAB Base
+# THREE Fiber LAB Base
 
-A-frame yes, React yes
+THREE yes, React yes
 
 - Uses `react-three-fiber` https://github.com/pmndrs/react-three-fiber
+  - A map for JSX intrinsic elements to THREE objects
 
 - Uses `drei` https://github.com/pmndrs/drei
   - `Drei` docs: https://drei.pmnd.rs
