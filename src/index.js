@@ -2,20 +2,10 @@ import './index.css';
 import ReactDOM from 'react-dom'
 import React from 'react'
 import Scene from './Scene';
-import { Canvas } from '@react-three/fiber'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Canvas camera={{
-    type: 'PerspectiveCamera',
-    aspect: window.innerWidth / window.innerHeight,
-    near: 0.1,
-    far: 1000
-  }}>
-    <directionalLight color="0xffffff" intensity={0.7} />
-    <ambientLight color="0xffffff" intensity={0.2} />
-    <Scene />
-  </Canvas>,
+  <Scene />,
   document.getElementById('root'),
 );
 
