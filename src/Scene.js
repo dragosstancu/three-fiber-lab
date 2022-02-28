@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import React, { useRef, useState } from 'react'
-import { useFrame } from '@react-three/fiber'
+import React, { useRef, useState } from 'react';
+import { useFrame } from '@react-three/fiber';
 
 const uniforms = {
     colorA: {
@@ -14,7 +14,7 @@ const uniforms = {
     colorC: {
       type: 'vec3',
       value: new THREE.Color("rgb(10, 155, 220)")
-  },
+  }
 };
 
 const vertexShader = `
@@ -91,7 +91,7 @@ function Box(props) {
     )
 };
 
-export default function App () {
+export default function Scene () {
 
     return <Box position={[0, 0, 0]} />;
 };
