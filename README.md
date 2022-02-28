@@ -2,6 +2,8 @@
 
 A-frame yes, React yes
 
-- Uses https://github.com/pmndrs/react-three-fiber
+- Uses `react-three-fiber` https://github.com/pmndrs/react-three-fiber
 
-- Lookup THREE stuff on https://threejs.org/docs
+- Uses `drei` https://github.com/pmndrs/drei
+
+- Lookup `THREE` stuff here https://threejs.org/docs
