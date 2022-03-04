@@ -2,8 +2,8 @@ import {
     PerspectiveCamera,
     // CubeCamera,
     OrbitControls,
-    GizmoHelper,
-    GizmoViewport,
+    GizmoHelper as AxisGizmoHelper,
+    GizmoViewport as AxisGizmoViewport,
     GizmoViewcube
 } from '@react-three/drei';
 
@@ -27,19 +27,19 @@ export default function Cam(props) {
     return (
         <>
             {/* <CubeCamera makeDefault /> */}
-            {/* <PerspectiveCamera makeDefault /> */}
+            {/* <PerspectiveCamera args={[2, 10, 4]} /> */}
             <OrbitControls
                 autoRotate={autoRotate}
                 autoRotateSpeed={autoRotateSpeed}
             />
-            <GizmoHelper
+            <AxisGizmoHelper
                 alignment="bottom-right" // widget alignment within scene
                 margin={[80, 80]} // widget margins (X, Y)
                 // onUpdate={ called during camera animation  }
                 // onTarget={ return current camera target (e.g. from orbit controls) to center animation }
             >
-                <GizmoViewport {...gizmoViewportConfig} />
-            </GizmoHelper>
+                <AxisGizmoViewport {...gizmoViewportConfig} />
+            </AxisGizmoHelper>
         </>
     );
 }
