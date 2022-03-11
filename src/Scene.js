@@ -7,7 +7,7 @@ import Text from './components/Text';
 import Bg from './components/Bg';
 import Info from './components/Info';
 
-const GH_REPO = 'https://github.com/wswoodruff/a-frame-lab-fiber';
+const GH_REPO = 'https://github.com/wswoodruff/three-fiber-lab';
 // const PROGRAMMER_RED = 'rgb(255, 0, 0)';
 const PROGRAMMER_GREEN = 'rgb(0, 255, 0)';
 const PROGRAMMER_BLUE = 'rgb(0, 0, 255)';
